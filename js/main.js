@@ -3,42 +3,47 @@
 console.log("hello");
 console.log("hello2");
 setTimeout(() => {
-    for (let i = 0;i <=20; i++){// asincronas ta pore output dibe
+    for (let i = 0;i <=5; i++){// asincronas ta pore output dibe
         console.log(i);
     }
     console.log('after 2 second pore settimer bitor ja ache ta asbe asbe');
     
-},2000)
+},200)
 console.log('end3');
 
-//-----------------sincronas------way
 
-
-function one() {
-    console.log('one');
+function redy() {
     setTimeout(() => {
-        console.log('eita hoilo asincronas');// eita holo asincronas
-        
+        console.log('redy hoilo asincronas');
+    }, 1000);
+}
+
+
+
+//--------------------------sincronas----------------------way
+
+
+function video() {
+    setTimeout(() => {
+        console.log('video arrive');
     }, 1000);
 }
 
 function two() {
-    console.log('two');
+    console.log('two');// eita hoilo sincronas
 }
 
 function three() {
-    console.log('three');
+    console.log('three');// eita hoilo sincronas
 }
 
-function four() {
-    console.log('four');
+function Popup() {
     setTimeout(() => {
-        console.log('Popup opnen');// eita holo asincronas
-        
+        console.log('Popup open');
     }, 2000);
 }
 
-four();
+Popup();
 two();
-one();
+video();
 three();
