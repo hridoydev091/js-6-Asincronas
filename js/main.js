@@ -47,3 +47,24 @@ Popup();
 two();
 video();
 three();
+
+
+//----------------callback function-----way
+function getMyName() {
+    console.log('Hridoy');
+}
+let anotherfunction = getMyName;// eita hoilo function 
+anotherfunction();
+
+
+function rakib(firstName,LastName) {
+    console.log(firstName + '' +LastName);
+}
+rakib('shohel','RAJIP');// eita hoilo function 
+
+function rakib2(firstname,lastname) {
+    console.log(firstname,lastname);
+}
+let name1 = 'morshed';
+let name2 = 'kalam';
+rakib2 (name1,name2);// eita hoilo function 
